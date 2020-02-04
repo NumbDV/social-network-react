@@ -3,10 +3,16 @@
 	grid-area: n;
 	background-color: lightblue;
 }
-
 .item {
-    color: #fff;
+	margin-bottom: 10px;
 }
-.item.active {
+.item:hover {
+	background-color: cornflowerblue;
+}
+.item a {
+    color: #fff;
+	text-decoration: none;
+}
+.item a.active {
 	color: grey;
 }
