@@ -32,8 +32,6 @@ let state = {
             {id: 3, name: 'Super Robot', url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR4I5bAC_Vp_-DLj6pmZ_itrdhVX4G6Gj9u3OeKmr4y8GJZBsd2'}
         ],
     }
-
-
 }
 export let addPost = (postMessage) => {
     debugger;
