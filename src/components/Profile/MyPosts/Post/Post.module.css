@@ -1,9 +1,18 @@
 
 .item {
+    margin-bottom: 25px;
     padding-left: 15px;
     color: blue;
+    display: flex;
+    align-items: center;
 }
 .item img {
     width: 70px;
     border-radius: 50%;
+}
+.item p {
+    margin-left: 40px;
+}
+.item div {
+    margin-left: 60px;
 }
