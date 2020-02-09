@@ -9,18 +9,19 @@ const MyPosts = (props) => {
     let newPostElement = React.createRef() // создает ссылку на элемент
 
     let addPost = () =>  {
-        props.addPost();
+        props.dispatch({type: 'ADD-POST'});
     };
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.updateNewPostText(text);
+        let action = {type: 'UPDATE-NEW-POST-TEXT', newText: text};
+        props.dispatch(action);
     }
     return (
         <div className={styles.postBlock}>
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText}/> {/*привязываем ссылку к этому элементу*/}
+                    <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText}></textarea> {/*привязываем ссылку к этому элементу*/}
                 </div>
                 <div>
                     <button onClick={ addPost }>Add post</button>

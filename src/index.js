@@ -1,7 +1,5 @@
-
 import * as serviceWorker from './serviceWorker';
 import store from "./redux/state";
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -12,8 +10,7 @@ let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <BrowserRouter>
             <App state={state}
-                 updateNewPostText={store.updateNewPostText.bind(store)}
-                 addPost={store.addPost.bind(store)}/>  {/*при bind this у addPost будет store'ом*/}
+                 dispatch={store.dispatch.bind(store)}/>  {/*при bind this у dispatch будет store'ом*/}
         </BrowserRouter>, document.getElementById('root'));
 }
 
